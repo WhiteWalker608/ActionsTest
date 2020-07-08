@@ -10,10 +10,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2
-      with:
-        path: repo
     - name: Build folder
-      run: cd repo && mkdir build && cd build
+      run: mkdir build && cd build
     - name: CMake
       run: cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
     - name: Make

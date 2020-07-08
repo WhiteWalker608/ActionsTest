@@ -1,0 +1,20 @@
+name: Test matrix
+on: workflow_dispatch
+jobs:
+  build:
+    name: Build
+    strategy:
+      matrix:
+        os: [ubuntu-18.04, ubuntu-20.04]
+        build_type: [Debug, Release]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build folder
+      run: mkdir build && cd build
+    - name: CMake
+      run: cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+    - name: Make
+      run: make -j4
+    - name: Tests
+      run: ctest

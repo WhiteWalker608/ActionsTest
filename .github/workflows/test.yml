@@ -16,6 +16,7 @@ jobs:
       run: |
        sudo apt-get install doxygen
        sudo apt install graphviz
+       sudo apt-get install libboost-all-dev
     - name: Build folder
       run: mkdir build
     - name: CMake

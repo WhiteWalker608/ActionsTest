@@ -16,14 +16,10 @@ jobs:
       run: sudo apt-get install doxygen
     - name: install graphviz dot
       run: sudo apt install graphviz
-    - name: install liboost
-      run: |
-        sudo apt-get install libboost-dev
-        sudo apt-get install libboost-all-dev
     - name: Build folder
       run: mkdir build
     - name: CMake
-      run: cd build && cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DBoost_DETAILED_FAILURE_MSG=TRUE
+      run: cd build && cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
     - name: Make
       run: cd build && make -j4
     - name: Tests

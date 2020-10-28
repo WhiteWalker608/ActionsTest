@@ -23,7 +23,7 @@ jobs:
     - name: Build folder
       run: mkdir build
     - name: CMake
-      run: cd build && cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+      run: cd build && cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DBoost_DETAILED_FAILURE_MSG=TRUE
     - name: Make
       run: cd build && make -j4
     - name: Tests

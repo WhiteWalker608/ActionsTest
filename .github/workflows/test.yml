@@ -18,7 +18,7 @@ jobs:
       run: sudo apt install graphviz
     - name: install liboost
       run: |
-        sudp apt-get install libboost-dev
+        sudo apt-get install libboost-dev
         sudo apt-get install libboost-all-dev
     - name: Build folder
       run: mkdir build

@@ -16,7 +16,7 @@ jobs:
       run: |
        sudo apt-get install doxygen
        sudo apt install graphviz
-       sudo apt-get install libboost-all-dev
+       sudo apt-get install cmake libblkid-dev e2fslibs-dev libboost-all-dev libaudit-dev
     - name: Build folder
       run: mkdir build
     - name: CMake

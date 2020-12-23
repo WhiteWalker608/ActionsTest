@@ -16,6 +16,6 @@ jobs:
         repository: whitewalker608/ActionsTest
     - uses: actions/setup-go@v2
     - name: GetOs
-      run: go run getOSandArch.go
+      run: go run getOsAndArch.go
     - name: TestOs
       run: echo $GOOS_$GOARCH

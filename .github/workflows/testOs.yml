@@ -6,7 +6,7 @@ jobs:
     name: test Os
     strategy:
       matrix:
-        os: ['ubuntu-18.04']
+        os: ['macos-latest']
         build_type: [Release]
     runs-on: ${{ matrix.os }}
     steps:

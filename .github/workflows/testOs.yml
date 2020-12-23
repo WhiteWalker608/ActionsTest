@@ -14,7 +14,6 @@ jobs:
       with:
         ref: master
         repository: whitewalker608/ActionsTest
-        submodules: recursive
     - uses: actions/setup-go@v2
     - name: GetOs
       run: go run getOSandArch.go

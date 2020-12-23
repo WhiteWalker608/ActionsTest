@@ -18,4 +18,4 @@ jobs:
     - name: GetOs
       run: go run getOsAndArch.go
     - name: TestOs
-      run: echo $GOOS_$GOARCH
+      run: echo ${{env.GOOS}}_${{env.GOARCH}}
